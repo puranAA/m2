@@ -1,0 +1,30 @@
+<!--@subject Sending email from my custom module @-->
+ 
+{{template config_path="design/email/header_template"}}
+<table>
+     <tr class="email-intro">
+         <td>
+		 Name: {{var name}}
+         </td>
+         <td>
+         Email: {{var email}}
+         </td>
+		 <td>
+         Contact: {{var contact}}
+         </td>
+		 <td>
+         Notes: {{var notes}}
+         </td>
+		 <td>
+         Price: {{var price}}
+         </td>
+		 <td>
+         QTY: {{var qty}}
+         </td>
+		 <td>
+         Product Name: {{var product_name}}
+         </td>
+     </tr>
+ </table>
+ 
+{{template config_path="design/email/footer_template"}}

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Ktpl
+ * @package    Ktpl_RequestForQuote
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="ktpl_requestforquote::core" title="Request For Quote" module="Ktpl_RequestForQuote" sortOrder="90" resource="Ktpl_RequestForQuote::sample"/>
+        <add id="ktpl_requestforquote::test" title="Request For Quote" module="Ktpl_RequestForQuote" sortOrder="1" parent="ktpl_requestforquote::core" action="ktpl_requestforquote/items/" resource="Ktpl_RequestForQuote::items"/>
+		<add id="ktpl_requestforquote::configuration" title="Configuration" module="Ktpl_RequestForQuote" resource="Ktpl_RequestForQuote::config_requestforquote" parent="ktpl_requestforquote::core" sortOrder="2" action="admin/system_config/edit/section/ktpl_config/"/>
+    </menu>
+</config>

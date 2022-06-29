@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="product.info.addtocart" template="Ktpl_RequestForQuote::product/view/addtocart.phtml"/>
+        <referenceBlock name="product.info.addtocart.additional" template="Ktpl_RequestForQuote::product/view/addtocart.phtml"/>
+		<referenceBlock name="catalog.product.related" template="Ktpl_RequestForQuote::product/list/items.phtml"/>
+		<referenceBlock name="product.info.upsell" template="Ktpl_RequestForQuote::product/list/items.phtml"/>
+    </body>
+</page>

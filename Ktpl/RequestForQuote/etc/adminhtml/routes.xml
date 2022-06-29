@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Ktpl
+ * @package    Ktpl_RequestForQuote
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/App/etc/routes.xsd">
+    <router id="admin">
+        <route id="ktpl_requestforquote" frontName="ktpl_requestforquote">
+            <module name="Ktpl_RequestForQuote" />
+        </route>
+    </router>
+</config>

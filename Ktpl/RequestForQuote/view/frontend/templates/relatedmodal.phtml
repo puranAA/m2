@@ -1,0 +1,77 @@
+</form>
+  <!-- Modal -->
+  <div class="modal fade myModal2" role="dialog" style="display:none;">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"><?php echo $this->helper('Ktpl\RequestForQuote\Helper\Data')->getConfig('ktpl_config/advance/inquiry_form_title');?></h4>
+        </div>
+        <div class="modal-body">
+          <form class="" action="<?php echo $block->getBaseUrl().'requestforquote/index/save'; ?>" id="ktpl-requestforquote-form" method="post" data-mage-init='{"validation": {}}'>
+    <fieldset class="fieldset">
+        <div class="field name">
+            <label class="label" for="title"><span>Name</span></label>
+            <div class="control">
+                <input name="name" id="name" title="Name" value="" class="input-text" type="text" data-validate="{required:true}">
+            </div>
+        </div>
+        <div class="field email">
+            <label class="label" for="author"><span>Email</span></label>
+            <div class="control">
+                <input name="email" id="email" title="Email" value="" class="input-text" type="text" data-validate="{required:true}">
+            </div>
+        </div>
+		<div class="field contact">
+            <label class="label" for="author"><span>Contact</span></label>
+            <div class="control">
+                <input name="contact" id="contact" title="Contact" value="" class="input-text" type="text" data-validate="{required:true}">
+            </div>
+        </div>
+        <div class="field notes">
+            <label class="label" for="notes"><span>Notes</span></label>
+            <div class="control">
+                <textarea name="notes" id="notes" title="Notes" class="input-text" cols="5" rows="3" data-validate="{required:true}"></textarea>
+            </div>
+        </div>
+		<div class="field price">
+            <label class="label" for="price"><span>Price</span></label>
+            <div class="control">
+                <input name="price" id="price" title="Price" value="" class="input-text" type="text" data-validate="{required:true}">
+            </div>
+        </div>
+		<div class="field qty">
+            <label class="label" for="qty"><span>QTY</span></label>
+            <div class="control">
+                <input name="qty" id="qty" title="QTY" value="" class="input-text" type="text" data-validate="{required:true}">
+            </div>
+        </div>
+		<div class="field product_name">
+            <label class="label" for="author"><span>Product Name</span></label>
+            <div class="control">
+                <input name="product_name" id="product_name" title="Product Name" value="" class="input-text" type="text" data-validate="{required:true}">
+            </div>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" title="Submit" class="action submit primary">
+                <span><?php echo $this->helper('Ktpl\RequestForQuote\Helper\Data')->getConfig('ktpl_config/advance/inquiry_form_submit_btn_txt');?></span>
+            </button>
+        </div>
+    </div>
+</form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  require(['jquery', 'Ktpl_RequestForQuote/js/custom_requestforquote'],
+      function ($) {
+          return;
+      }
+  );
+  </script>
+    <style>
+  .modal-footer{display: none;}
+  </style>
