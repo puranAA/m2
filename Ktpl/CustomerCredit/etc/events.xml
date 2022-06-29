@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="customer_register_success">
+        <observer name="Ktpl_CustomerCredit_Customer_Save_After" instance="Ktpl\CustomerCredit\Observer\customerSaveAfter" />
+    </event>
+    <event name="sales_order_place_before">
+        <observer name="Ktpl_CustomerCredit_Checkout_Onepage_Success" instance="Ktpl\CustomerCredit\Observer\orderSaveAfter" />
+    </event>
+</config>  	

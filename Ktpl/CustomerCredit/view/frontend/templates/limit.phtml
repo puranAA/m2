@@ -1,0 +1,26 @@
+<?php 
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$urlInterface = $objectManager->get('\Magento\Framework\UrlInterface');
+$customerSession = $this->getCustomerSession();
+
+if(!$this->getCustomerSession()->getCustomer()->getId()) :
+    $customerSession->setAfterAuthUrl($urlInterface->getCurrentUrl());
+    $customerSession->authenticate(); ?>
+
+<?php else :
+$cid = $this->getCustomerSession()->getCustomer()->getId();
+$home_url = $this->helper('Ktpl\CustomerCredit\Helper\Data')->getBaseUrl();
+
+$limit = $this->getAvailableLimits($cid)->getFirstItem()->getCreditLimit();
+$formatted_limit = $this->helper('Magento\Framework\Pricing\Helper\Data')->currency($limit,true,false);?>
+
+<p><?php echo __('Your Available Credit Limit is '."<span style='color:green'>".$formatted_limit."</span>");?></p>
+
+
+<div class="customer-history" style="margin-top: 5%;">
+
+<h1><?php echo __('Transaction History');?></h1>
+<?php echo $this->getLayout()->createBlock("Ktpl\CustomerCredit\Block\Creditlimit")->setTemplate("Ktpl_CustomerCredit::history.phtml")->toHtml(); ?>   
+
+</div>
+<?php endif;?>

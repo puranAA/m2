@@ -1,0 +1,12 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="customer_account"/>
+    <head>
+    	<title>My Credit Limits</title>
+	</head> 
+    <body>
+     
+     <referenceContainer name="content">
+             <block class="Ktpl\CustomerCredit\Block\Creditlimit" name="creditlimit" template="Ktpl_CustomerCredit::limit.phtml" cacheable="false" />
+        </referenceContainer>
+    </body>
+</page>

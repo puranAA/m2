@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<add id="Ktpl_CustomerCredit::creditlimit" title="Credit Limit Usage" module="Ktpl_CustomerCredit" sortOrder="100" resource="Ktpl_CustomerCredit::bulkenquiry" action="creditlimit/creditlimit"/>
+		<add id="Ktpl_CustomerCredit::testc" title="Customer Credit Limit" module="Ktpl_CustomerCredit" sortOrder="1" parent="Ktpl_CustomerCredit::creditlimit" action="ktpl_customercredit/items/" resource="Ktpl_CustomerCredit::items"/>
+		<add id="Ktpl_CustomerCredit::test" title="Credit Limit Usage" module="Ktpl_CustomerCredit" sortOrder="2" parent="Ktpl_CustomerCredit::creditlimit" action="creditlimit/creditlimit" resource="Ktpl_CustomerCredit::bulkenquiry"/>
+		<add id="Ktpl_CustomerCredit::configuration" title="Configuration" module="Ktpl_CustomerCredit" resource="Ktpl_CustomerCredit::config_requestforquote" parent="Ktpl_CustomerCredit::creditlimit" sortOrder="3" action="admin/system_config/edit/section/credit_limit/"/>
+   	</menu>
+</config>

@@ -1,0 +1,10 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <route id="creditlimit" frontName="creditlimit">
+            <module name="Ktpl_CustomerCredit" before="Ktpl_CustomerCredit" />
+        </route>
+		<route id="ktpl_customercredit" frontName="ktpl_customercredit">
+            <module name="Ktpl_CustomerCredit" />
+        </route>
+    </router>
+</config>
